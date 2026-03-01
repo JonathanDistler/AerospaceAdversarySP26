@@ -117,7 +117,6 @@ Then, begin the simulation with the following, and then execute the script in an
 pip install MAVProxy
 
 mavproxy.py --master=udp:127.0.0.1:14550 #needs to always be running in background
-
 ```
 
 The entire pipeline by terminal is below, for our specific use-case: 
