@@ -59,11 +59,11 @@ cd ~/gps_ws
 colcon build
 ```
 
-We had issues creating a package to publish the positional data, so we concatenated two libraries on top of each other in the following publisher: 
+We had issues creating a package to publish the positional data, so we concatenated two libraries on top of each other in the following subscriber: 
 
-[Marvelmind ROS 2 Publisher](https://docs.google.com/document/d/1ff4DUxiCMj8-jBYLdYZq3IawdXlIeO-HAD4Mr4BNwYw/edit?tab=t.0)
+[Marvelmind ROS 2 Subscriber](https://docs.google.com/document/d/1ff4DUxiCMj8-jBYLdYZq3IawdXlIeO-HAD4Mr4BNwYw/edit?tab=t.0)
 
-After saving the publisher in the workspace, one can execute the following lines in terminal to query Marvelmind data (below is our folder specific version):
+After saving the subscriber in the workspace, one can execute the following lines in terminal to query Marvelmind data (below is our folder specific version):
 
 ```
 cd ~/gps_ws
