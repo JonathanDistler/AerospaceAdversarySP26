@@ -1,0 +1,40 @@
+# PX4 Parameter File
+# Vehicle configuration exported/created for QGroundControl
+
+
+1 1 SYS_AUTOSTART 4001 2
+
+
+# Commander
+1 1 COM_ARM_MAG_ANG -1 6
+
+
+# Sensor calibration (magnetometers)
+1 1 CAL_MAG0_EN 0 2
+1 1 CAL_MAG0_ID 396825 2
+1 1 CAL_MAG0_XOFF -0.018 6
+1 1 CAL_MAG0_XSCALE 1.015 6
+1 1 CAL_MAG0_YOFF 0.020 6
+1 1 CAL_MAG0_YSCALE 0.981 6
+1 1 CAL_MAG0_ZOFF 0.068 6
+1 1 CAL_MAG0_ZSCALE 1.004 6
+
+
+1 1 CAL_MAG1_ID 396809 2
+1 1 CAL_MAG1_ROT 0 2
+
+
+1 1 CAL_MAG2_ROT 0 2
+1 1 CAL_MAG3_ROT 0 2
+
+
+1 1 CAL_MAG_PRIME 396809 2
+
+
+# EKF2 estimator
+1 1 EKF2_MAG_TYPE 0 2
+1 1 EKF2_HGT_MODE 0 2
+
+
+# Circuit breakers
+1 1 CBRK_USB_CHK 197848 2
