@@ -1,3 +1,6 @@
+
+![Aerospace Adversary's Magpie Project - 2026](tools/Adversary_Logo.png)
+
 # Cornell Aerospace Adversary Lab - Magpie Project 
 The following outline some of the many pipelines involved in the Magpie Project as part of Cornell University's Aerospace Adversary Lab. 
 
@@ -70,6 +73,10 @@ cd ~/gps_ws
 source install/setup.bash
 ros2 run gps_listener listener
 ```
+
+Ideally the map will look like the following: 
+![Functional Marvelmind Map](tools/Submap_Marvelmind.png)
+
 
 ### Gazebo Telemetry Data
 In addition to the hardware pipeline involving Marvelmind, we also implemented a Gazebo and PX4 simulation setup using the following steps provided by Cameron Mehlman: 
@@ -151,5 +158,7 @@ For a more robust pipeline, I altered the code for MAVProxy to include the follo
 
 [Updated MAVProxy Subscriber/Listener Node](src/Mavsdk_Subscriber.py)
 
+The entire setup process for sourcing and getting a functional ROS2 ws is kept at the following: [ROS2 WS Setup](src/ros2_ws_setup)
 
-Finally, there are some filters included underneath **src/filters/. . .** which artificially smooth the readings of the GPS which can sometimes be desirable. 
+
+Finally, there are some filters included underneath **src/filters/. . .** which artificially smooth the readings of the GPS which can sometimes be desirable. And, there are some useful CAD .stl files underneath **docs/CAD/. . .**.

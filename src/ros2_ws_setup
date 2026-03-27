@@ -1,0 +1,27 @@
+ssh magpie@192.168.55.1 
+[pw:magpie] 
+sudo apt update && sudo apt upgrade -y 
+sudo apt install ros-humble-desktop -y 
+echo "source /opt/ros/*/setup.bash" >> ~/.bashrc 
+source ~/.bashrc 
+mkdir -p ~/ros2_ws/src 
+cd ~/ros2_ws 
+colcon build 
+source install/setup.bash 
+echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc 
+cd ~/ros2_ws/src 
+ros2 pkg create --build-type ament_python marvelmind_mavsdk 
+[Move scripts to: ~/ros2_ws/src/marvelmind_mavsdk/marvelmind_mavsdk/] 
+cd ~/ros2_ws/src/marvelmind_mavsdk/marvelmind_mavsdk 
+chmod +x ROS2_Listener_Mavsdk.py 
+chmod +x ROS_Publisher_Mavsdk.py 
+nano ~/ros2_ws/src/marvelmind_mavsdk/setup.py 
+[replace entry points with the following: entry_points={ 
+'console_scripts': [ 
+'mavsdk_listener = marvelmind_mavsdk.ROS2_Listener_Mavsdk:main', 
+'mavsdk_publisher = marvelmind_mavsdk.ROS_Publisher_Mavsdk:main', 
+], 
+},   ] 
+cd ~/ros2_ws 
+colcon build 
+source install/setup.bash
