@@ -13,7 +13,7 @@ Using Marvelmind Robotic's GPS setup and following their video below, along with
 From the video, download the latest stable SW and API; unzip the files; then navigate to the Dashboard folder, then once inside the Dashboard folder navigate to the appropriate folder for your particular system (e.g. Linux). Follow the embedded pdf (e.g. "dashboard_linux_manual_v2019_05_14.pdf") in the aforementioned folder. Copy the dashboard and dashboard API to the directory you will use for the program: 
 
 ```
-sudo cp libdashapi.so/usr/local/lib
+sudo cp libdashapi.so /usr/local/lib
 
 sudo ldconfig
 ```
@@ -38,7 +38,7 @@ Pull the following Python script developed by Marvelmidn and slightly adjusted b
 
 Then, save the python script in the same folder as the following: 
 
-[Marvelmind Positional Graphing](../src/Position.py)
+[Marvelmind Positional Graphing](src/Position.py)
 
 Figure out the port the modem is connected too (e.g. ACM0), make sure that is the same port reflected in the "Marvelmind Raw Python Script" underneath the "_init_" function in the MarvelmindHedge class. 
 
@@ -46,7 +46,7 @@ Now, you can query the position of a mobile beacon (known in Marvelmind as a hed
 
 Additionally, one can follow the following script that uses an output CSV file to graph position over time, rather than a pure line-graph:
 
-[Marvelmind Positional Graphing - 3D](../src/3DPosition.mlx)
+[Marvelmind Positional Graphing - 3D](src/3DPosition.mlx)
 
 ## Marvelmind ROS 2 Publisher and Subscriber
 For future work in swarm-drone tactics, ROS 2 is far and ahead the best method, so we also developed methods to query in real-time with ROS 2 pub-sub architecture. 
@@ -61,7 +61,7 @@ colcon build
 
 We had issues creating a package to publish the positional data, so we concatenated two libraries on top of each other in the following subscriber: 
 
-[Marvelmind ROS 2 Subscriber](../src/MarvelmindROS2_Subscriber.py)
+[Marvelmind ROS 2 Subscriber](src/MarvelmindROS2_Subscriber.py)
 
 After saving the subscriber in the workspace, one can execute the following lines in terminal to query Marvelmind data (below is our folder specific version):
 
@@ -147,9 +147,9 @@ ros2 run mavsdk_ros2 mavsdk_listener_node
 
 For a more robust pipeline, I altered the code for MAVProxy to include the following publisher and subscriber:
 
-[Updated MAVProxy Publisher/Command Node](../src/Mavsdk_Publisher.py)
+[Updated MAVProxy Publisher/Command Node](src/Mavsdk_Publisher.py)
 
-[Updated MAVProxy Subscriber/Listener Node](../src/Mavsdk_Subscriber.py)
+[Updated MAVProxy Subscriber/Listener Node](src/Mavsdk_Subscriber.py)
 
 
-Finally, there are some filters included underneath **src/Filters/. . .** which artificially smooth the readings of the GPS which can sometimes be desirable. 
+Finally, there are some filters included underneath **src/filters/. . .** which artificially smooth the readings of the GPS which can sometimes be desirable. 
