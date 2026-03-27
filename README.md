@@ -161,4 +161,4 @@ For a more robust pipeline, I altered the code for MAVProxy to include the follo
 The entire setup process for sourcing and getting a functional ROS2 ws is kept at the following: [ROS2 WS Setup](src/ros2_ws_setup)
 
 
-Finally, there are some filters included underneath **src/filters/. . .** which artificially smooth the readings of the GPS which can sometimes be desirable. And, there are some useful CAD .stl files underneath **docs/CAD/. . .**.
+Finally, there are some filters included underneath [src/Filters/](src/Filters/) which artificially smooth the readings of the GPS which can sometimes be desirable. And, there are some useful CAD .stl files underneath [docs/CAD/](docs/CAD/)
